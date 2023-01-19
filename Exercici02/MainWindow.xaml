@@ -1,0 +1,52 @@
+﻿<Window x:Class="Exercici02.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exercici02"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Carregar imatge" Name="btnCarregarImg" Margin="8" Click="btnCarregarImg_Click"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Imatge missage original" Margin="16"/>
+            <TextBlock Text="Imatge missage xifrat" Grid.Column="1" Margin="16"/>
+
+            <Image Source="/Img/messiCampeonDelMundo.jpg" Grid.Column="0" Grid.Row="1" Margin="16,8,8,8" x:Name="imgObrir"/>
+            <Image Grid.Column="1" Grid.Row="1" Margin="8,8,16,8" Name="imgManipulada"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Content="Inserir missatge" Name="btnInserirImg" Margin="16,8,8,8" Click="btnInserirImg_Click"/>
+            <TextBox x:Name="tbMissatje" Margin="8,8,16,8" Grid.Column="1" TextChanged="tbMissatje_TextChanged"/>
+        </Grid>
+    </Grid>
+</Window>
